@@ -1,0 +1,45 @@
+services:
+  db:
+    image: postgres:17
+    container_name: postgres-local
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: mrq831028
+      POSTGRES_USER: zemarques
+      POSTGRES_DB: tarefas-db
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data_local:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U zemarques -d tarefas-db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - network-local
+
+  app:
+    build: .
+    container_name: tarefas-app
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: zemarques
+      DB_PASS: mrq831028
+      DB_NAME: tarefas-db
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - network-local
+
+volumes:
+  postgres_data_local:
+
+networks:
+  network-local:

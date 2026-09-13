@@ -1,0 +1,283 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    background: #1b5e20;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.btn-download {
+    background: #2e7d32;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.btn-download:hover {
+    background: #1b5e20;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 90vh;
+}
+
+.hero-left h1 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #222;
+    margin: 0;
+    text-align: center;
+}
+
+.hero-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-center img {
+    max-width: 100%;
+    width: 280px;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.hero-right li {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.feature-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-img img {
+    max-width: 100%;
+    width: 260px;
+    height: auto;
+    object-fit: contain;
+}
+
+.feature-text {
+    flex: 1;
+    text-align: center;
+}
+
+.feature-text h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 12px;
+}
+
+.feature-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+/* CTA */
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.btn-large {
+    padding: 16px 48px;
+    font-size: 18px;
+}
+
+.cta-free {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2e7d32;
+    margin: 0;
+}
+
+/* FOOTER */
+footer {
+    padding: 24px 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+footer p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+}
+
+@media (width > 900px) {
+    header {
+        padding: 20px 60px;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+    }
+
+    .btn-download {
+        padding: 12px 32px;
+        font-size: 16px;
+    }
+
+    .hero {
+        flex-direction: row;
+        height: 90vh;
+        min-height: 0;
+        padding: 0 60px;
+        gap: 40px;
+    }
+
+    .hero-left {
+        flex: 1;
+    }
+
+    .hero-left h1 {
+        font-size: 32px;
+        text-align: left;
+    }
+
+    .hero-center {
+        flex: 1;
+    }
+
+    .hero-center img {
+        width: auto;
+        max-height: 500px;
+    }
+
+    .hero-right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hero-right ul {
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    .hero-right li {
+        font-size: 20px;
+    }
+
+    /* FEATURES */
+    .features {
+        gap: 80px;
+        padding: 80px 60px;
+    }
+
+    .feature {
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    .feature.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .feature-text {
+        text-align: left;
+    }
+
+    .feature-text h2 {
+        font-size: 28px;
+    }
+
+    .feature-text p {
+        font-size: 18px;
+    }
+
+    .feature-img img {
+        width: auto;
+        max-height: 420px;
+    }
+
+    /* CTA */
+    .cta {
+        padding: 80px 60px;
+    }
+
+    footer {
+        padding: 24px 60px;
+    }
+}

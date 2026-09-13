@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Lista de Tarefas</h1>
+
+    <section class="card">
+      <form id="form-tarefa" class="form-tarefa">
+        <input
+          type="text"
+          id="input-tarefa"
+          class="input-tarefa"
+          placeholder="Digite uma nova tarefa..."
+          autocomplete="off"
+        >
+        <button type="submit" class="btn btn-adicionar">Adicionar</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <ul id="lista-tarefas" class="lista-tarefas"></ul>
+    </section>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
