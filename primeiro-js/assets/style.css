@@ -3,27 +3,14 @@ body {
     color: #fff;
 }
 
-.grande {
-    font-size: 40px;
-    color: green;
+.aviso {
+    display: none;
+    border: 2px solid green;
+    background-color: darkgreen;
+    color: white;
+    padding: 10px;
 }
 
-.pequeno {
-    font-size: 20px;
-    color: red;
-}
-
-.campo {
-    font-size: 30px;
-    padding: 15px;
-    border: 2px solid #000;
-    outline: none;
-}
-
-.erro {
-    border: 2px solid red;
-}
-
-#erro {
-    color: red;
+.mostrar {
+    display: block;
 }

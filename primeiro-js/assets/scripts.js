@@ -1,27 +1,13 @@
-let form = document.querySelector('form')
-let input = document.querySelector('#nome')
-let botao = document.querySelector('#botao')
-let erro = document.querySelector('#erro')
+function showWarning(text) {
+    let avisoElement = document.querySelector('.aviso')
+    avisoElement.innerText = text
+    avisoElement.classList.add('mostrar')
 
-function clearInput() {
-    input.value = ''
-    input.focus()
-    input.classList.remove('erro')
-    erro.innerText = ''
+    setTimeout(() => {
+        avisoElement.classList.remove('mostrar')        
+    }, 3000)
 }
 
-function sendMessage(text) {
-    let textSanitized = text.trim()
-    if (textSanitized.length > 2) {
-        console.log(textSanitized) 
-        clearInput()       
-    } else {
-        input.classList.add('erro')
-        erro.innerText = "Digitou errado, necessário mais de 2 caracteres"
-    }
-}
-
-form.addEventListener('submit', (event) => {
-    event.preventDefault() 
-    sendMessage(input.value)
+document.querySelector('button').addEventListener('click', () => {
+    showWarning('Conteúdo apareceu com sucesso')
 })
